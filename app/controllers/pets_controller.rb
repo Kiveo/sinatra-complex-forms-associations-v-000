@@ -1,4 +1,3 @@
-require 'pry'
 class PetsController < ApplicationController
 
   get '/pets' do
@@ -16,7 +15,6 @@ class PetsController < ApplicationController
     # if !params["owner"]["name"].empty?
     #   @pet.owner = Owner.create(name: params["owner"]["name"])
     # end
-    Binding.pry
     @pet.save
     redirect to "pets/#{@pet.id}"
   end
